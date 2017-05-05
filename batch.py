@@ -59,7 +59,7 @@ class batch():
         for i,image in enumerate(images):
             imgs_np[i] = image
         return imgs_np
-    def get_batch(self , *args):
+    def get_batch(self):
         type_1_imgs=makeBatch(train_1 , additional_1)
         type_2_imgs=makeBatch(train_2 , additional_2)
         type_3_imgs=makeBatch(train_3 , additional_3)

@@ -39,7 +39,7 @@ class batch():
                 try:
                     img=Image.open(path)
                     imgs.append(img)
-                    img=resize_image(img)
+                    img=self.resize_image(img)
                 except IOError as ioe:
                     f=open('Error_log.txt' , 'a')
                     f.write(str(ioe))
@@ -60,8 +60,8 @@ class batch():
             imgs_np[i] = image
         return imgs_np
     def get_batch(self):
-        type_1_imgs=makeBatch(train_1 , additional_1)
-        type_2_imgs=makeBatch(train_2 , additional_2)
-        type_3_imgs=makeBatch(train_3 , additional_3)
+        type_1_imgs=self.makeBatch(train_1 , additional_1)
+        type_2_imgs=self.makeBatch(train_2 , additional_2)
+        type_3_imgs=self.makeBatch(train_3 , additional_3)
         return type1_imgs , type2_imgs , type3_imgs
         

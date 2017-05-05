@@ -8,14 +8,14 @@ import os ,sys
 
 
 class batch():
-    def __init__(self ,folder_path):
+    def __init__(self ,folder_path , extension = '*.jpg'):
         self.folder_path = folder_path
-        train_1_paths=crawl_folder(folder_path+'train/Type_1/')
-        train_2_paths=crawl_folder(folder_path+'train/Type_2/')
-        train_3_paths=crawl_folder(folder_path+'train/Type_3/')
-        add_1_paths=crawl_folder(folder_path+'additional/Type_1/')
-        add_2_paths=crawl_folder(folder_path+'additional/Type_2/')
-        add_3_paths=crawl_folder(folder_path+'additional/Type_3/')
+        train_1_paths=glob.glob(folder_path+'train/Type_1/'+extension)
+        train_2_paths=glob.glob(folder_path+'train/Type_2/'+extension)
+        train_3_paths=glob.glob(folder_path+'train/Type_3/'+extension)
+        add_1_paths=glob.glob(folder_path+'additional/Type_1/'+extension)
+        add_2_paths=glob.glob(folder_path+'additional/Type_2/'+extension)
+        add_3_paths=glob.glob(folder_path+'additional/Type_3/'+extension)
 
         print len(add_1_paths)
         print len(add_2_paths)

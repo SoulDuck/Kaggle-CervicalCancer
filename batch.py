@@ -17,12 +17,12 @@ class batch():
         add_2_paths=glob.glob(folder_path+'additional/Type_2/'+extension)
         add_3_paths=glob.glob(folder_path+'additional/Type_3/'+extension)
 
-        print '# additional type1 :'+len(add_1_paths)
-        print '# additional type2 :'+len(add_2_paths)
-        print '# additional type3 :'+len(add_3_paths)
-        print '# traintype1 :'+len(train_1_paths)
-        print '# traintype2 :'+len(train_2_paths)
-        print '# traintype3 :'+len(train_3_paths)
+        print '# additional type1 :'+str(len(add_1_paths))
+        print '# additional type2 :'+str(len(add_2_paths))
+        print '# additional type3 :'+str(len(add_3_paths))
+        print '# traintype1 :'+str(len(train_1_paths))
+        print '# traintype2 :'+str(len(train_2_paths))
+        print '# traintype3 :'+str(len(train_3_paths))
 
         training_type1_paths=[]
         training_type2_paths=[]

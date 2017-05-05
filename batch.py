@@ -8,7 +8,7 @@ import os ,sys
 
 
 class batch():
-    def __init__(self ,folder_path)
+    def __init__(self ,folder_path):
         self.folder_path = folder_path
         train_1_paths=crawl_folder(folder_path+'train/Type_1/')
         train_2_paths=crawl_folder(folder_path+'train/Type_2/')

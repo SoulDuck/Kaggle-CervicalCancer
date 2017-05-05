@@ -17,12 +17,12 @@ class batch():
         self.add_2_paths=glob.glob(folder_path+'additional/Type_2/'+extension)
         self.add_3_paths=glob.glob(folder_path+'additional/Type_3/'+extension)
 
-        print '# additional type1 :'+str(len(add_1_paths))
-        print '# additional type2 :'+str(len(add_2_paths))
-        print '# additional type3 :'+str(len(add_3_paths))
-        print '# traintype1 :'+str(len(train_1_paths))
-        print '# traintype2 :'+str(len(train_2_paths))
-        print '# traintype3 :'+str(len(train_3_paths))
+        print '# additional type1 :'+str(len(self.add_1_paths))
+        print '# additional type2 :'+str(len(self.add_2_paths))
+        print '# additional type3 :'+str(len(self.add_3_paths))
+        print '# traintype1 :'+str(len(self.train_1_paths))
+        print '# traintype2 :'+str(len(self.train_2_paths))
+        print '# traintype3 :'+str(len(self.train_3_paths))
 
         self.training_type1_paths=[]
         self.training_type2_paths=[]
@@ -56,7 +56,7 @@ class batch():
     def Images2numpy(self , images , img_size=(224,224) , color_ch =3 ):
         n=len(images)
         imgs_np=np.zeros(n,img_size[0] , img_size[1] , color_ch )
-        for i,image in enumerate(images):
+        for i,image in enume0rate(images):
             imgs_np[i] = image
         return imgs_np
     def get_batch(self):

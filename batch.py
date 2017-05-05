@@ -10,12 +10,12 @@ import os ,sys
 class batch():
     def __init__(self ,folder_path , extension = '*.jpg'):
         self.folder_path = folder_path
-        train_1_paths=glob.glob(folder_path+'train/Type_1/'+extension)
-        train_2_paths=glob.glob(folder_path+'train/Type_2/'+extension)
-        train_3_paths=glob.glob(folder_path+'train/Type_3/'+extension)
-        add_1_paths=glob.glob(folder_path+'additional/Type_1/'+extension)
-        add_2_paths=glob.glob(folder_path+'additional/Type_2/'+extension)
-        add_3_paths=glob.glob(folder_path+'additional/Type_3/'+extension)
+        self.train_1_paths=glob.glob(folder_path+'train/Type_1/'+extension)
+        self.train_2_paths=glob.glob(folder_path+'train/Type_2/'+extension)
+        self.train_3_paths=glob.glob(folder_path+'train/Type_3/'+extension)
+        self.add_1_paths=glob.glob(folder_path+'additional/Type_1/'+extension)
+        self.add_2_paths=glob.glob(folder_path+'additional/Type_2/'+extension)
+        self.add_3_paths=glob.glob(folder_path+'additional/Type_3/'+extension)
 
         print '# additional type1 :'+str(len(add_1_paths))
         print '# additional type2 :'+str(len(add_2_paths))
@@ -24,12 +24,12 @@ class batch():
         print '# traintype2 :'+str(len(train_2_paths))
         print '# traintype3 :'+str(len(train_3_paths))
 
-        training_type1_paths=[]
-        training_type2_paths=[]
-        training_type3_paths=[]
-        test_type1_paths=[]
-        test_type2_paths=[]
-        test_type3_paths=[]
+        self.training_type1_paths=[]
+        self.training_type2_paths=[]
+        self.training_type3_paths=[]
+        self.test_type1_paths=[]
+        self.test_type2_paths=[]
+        self.test_type3_paths=[]
 
     def makeBatch(self , *args):
         imgs=[]
